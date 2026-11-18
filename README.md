@@ -1,20 +1,23 @@
-## Loan Prediction Model and NEPSE Data Visualization Projects
-This repository contains data science projects focusing on loan prediction using K-Nearest Neighbors (KNN), Support Vector Machine (SVM), and Logistic Regression models, 
-as well as visualization analysis of NEPSE (Nepal Stock Exchange) data.
+# Data Science Projects: Loan Prediction and NEPSE Analysis
 
-## Models
-Three models are implemented for loan prediction:
+## 1. Loan approval prediction (`Project_LoanPrediciton.ipynb`, data: `Dataset.csv`)
 
-# K-Nearest Neighbors (KNN):
-A non-parametric method used for classification tasks, where the output is a class membership. 
-It works by finding the most similar data points (nearest neighbors) in the training data and making predictions based on their class labels.
-# Support Vector Machine (SVM):
-A supervised learning algorithm that can be used for classification or regression tasks. 
-SVM constructs a hyperplane or set of hyperplanes in a high-dimensional space, which can be used for classification, regression, or other tasks.
-# Logistic Regression: 
-Despite its name, logistic regression is a linear model for binary classification. 
-It models the probability that an instance belongs to a particular class, which is often interpreted as the likelihood of loan default in this context.
+Predicts whether a home loan is approved from applicant income, credit history, property area and
+other fields. Missing values are filled, categories are encoded and several classifiers are compared.
+Logistic regression, SVM and k-NN are compared; logistic regression and SVM both reach 77.3% test accuracy and k-NN 71.4%. A cleaned-up version is in
+[loan-prediction-model](https://github.com/subarna007/loan-prediction-model).
 
-## NEPSE Data Visualization
-The NEPSE data visualization project focuses on analyzing and visualizing data from the Nepal Stock Exchange (NEPSE).
-By visualizing historical stock prices, trading volumes, market trends, and other relevant metrics, this project aims to provide insights into the performance and behavior of NEPSE-listed companies.
+## 2. NEPSE index analysis (`nepsedata.ipynb`, data: `nepse.csv`)
+
+Exploratory analysis of daily Nepal Stock Exchange (NEPSE) index data:
+
+- closing price over time and its 100-day moving average
+- daily trading volume and percentage change
+- high vs low prices, monthly box plots and the closing-price distribution
+
+## Run it
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+jupyter notebook
+```
